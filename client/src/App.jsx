@@ -1,3 +1,4 @@
+import Dashboard from "./components/Dashboard/Dashboard";
 import Employees from "./components/Employees/Employees";
 import Jobs from "./components/Jobs/Jobs";
 import Navbar from "./components/Navbar/Navbar";

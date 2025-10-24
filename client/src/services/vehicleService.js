@@ -23,6 +23,6 @@ export const updateVehicle = async (id, vehicle) => {
 };
 
 export const deleteVehicle = async (id) => {
-    const { data } = axios.delete(`${API_URL}/${id}`);
+    const { data } = await axios.delete(`${API_URL}/${id}`);
     return data;
 };
