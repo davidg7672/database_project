@@ -36,6 +36,22 @@ app.get("/health", async (req, res) => {
     }
 });
 
+// Root route
+app.get("/", (req, res) => {
+    res.status(200).json({
+        message: "Hello from Database Project API",
+        version: "1.0.0",
+        endpoints: {
+            health: "/health",
+            employees: "/api/employee",
+            customers: "/api/customer",
+            jobs: "/api/job",
+            vehicles: "/api/vehicle",
+        },
+    });
+});
+
+// API Routes
 app.use("/api/employee", employeeRouter);
 app.use("/api/customer", customerRouter);
 app.use("/api/job", jobRouter);
