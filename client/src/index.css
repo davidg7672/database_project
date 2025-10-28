@@ -1,5 +1,9 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
 @plugin "daisyui";
+
+@plugin "tailwindcss-animate";
 
 .container {
     display: flex;
