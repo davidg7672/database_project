@@ -1,6 +1,13 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
+    const location = useLocation();
+
+    const isActive = (path) => {
+        return location.pathname === path;
+    };
+
     return (
         <>
             <div className="navbar bg-base-100 shadow-sm">
@@ -32,10 +39,22 @@ function Navbar() {
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
                         >
                             <li>
-                                <a>Dashboard</a>
+                                <Link
+                                    to="/"
+                                    className={isActive("/") ? "active" : ""}
+                                >
+                                    Dashboard
+                                </Link>
                             </li>
                             <li>
-                                <a>Employee</a>
+                                <Link
+                                    to="/employees"
+                                    className={
+                                        isActive("/employees") ? "active" : ""
+                                    }
+                                >
+                                    Employees
+                                </Link>
                             </li>
                             <li>
                                 <a>Customers</a>
@@ -44,7 +63,14 @@ function Navbar() {
                                 <a>Vehicles</a>
                             </li>
                             <li>
-                                <a>Statistics</a>
+                                <Link
+                                    to="/statistics"
+                                    className={
+                                        isActive("/statistics") ? "active" : ""
+                                    }
+                                >
+                                    Statistics
+                                </Link>
                             </li>
                             <li>
                                 <a>About</a>
@@ -53,7 +79,9 @@ function Navbar() {
                     </div>
                 </div>
                 <div className="navbar-center">
-                    <a className="btn btn-ghost text-xl">Moving Company</a>
+                    <Link to="/" className="btn btn-ghost text-xl">
+                        Moving Company
+                    </Link>
                 </div>
                 <div className="navbar-end">
                     <button className="btn btn-ghost btn-circle">
