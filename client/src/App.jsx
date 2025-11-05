@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Dashboard from "./components/Dashboard/Dashboard";
 import EmployeesPage from "./pages/EmployeesPage";
+import CustomersPage from "./pages/CustomersPage";
+import VehiclesPage from "./pages/VehiclesPage";
 import StatisticsPage from "./pages/StatisticsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Navbar from "./components/Navbar/Navbar";
@@ -15,6 +17,8 @@ function App() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/employees" element={<EmployeesPage />} />
+                    <Route path="/customers" element={<CustomersPage />} />
+                    <Route path="/vehicles" element={<VehiclesPage />} />
                     <Route path="/statistics" element={<StatisticsPage />} />
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>

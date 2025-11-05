@@ -57,10 +57,24 @@ function Navbar() {
                                 </Link>
                             </li>
                             <li>
-                                <a>Customers</a>
+                                <Link
+                                    to="/customers"
+                                    className={
+                                        isActive("/customers") ? "active" : ""
+                                    }
+                                >
+                                    Customers
+                                </Link>
                             </li>
                             <li>
-                                <a>Vehicles</a>
+                                <Link
+                                    to="/vehicles"
+                                    className={
+                                        isActive("/vehicles") ? "active" : ""
+                                    }
+                                >
+                                    Vehicles
+                                </Link>
                             </li>
                             <li>
                                 <Link
